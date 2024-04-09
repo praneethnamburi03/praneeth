@@ -1,0 +1,115 @@
+
+<!--{% block body %}
+<form method="post">
+    {% csrf_token %}
+    {{ form }}
+    <button type="submit">Save</button>
+</form>
+{% endblock %}-->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Shop</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <style>
+        .navbar {
+            background-color: #333;
+            overflow: hidden;
+        }
+
+        .navbar a {
+            float: left;
+            display: block;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        .navbar a.add-transaction {
+            float: right;
+        }
+
+        .navbar a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        /* Customized Navbar */
+        .navbar-brand {
+            font-size: 24px;
+            color: #fff;
+            font-weight: bold;
+        }
+
+        .navbar-nav .nav-item {
+            margin: 0 10px;
+        }
+
+        .navbar-nav .nav-link {
+            color: #fff;
+            font-weight: bold;
+            transition: color 0.3s ease-in-out;
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: #ff7f50;
+        }
+
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="{% url 'shops:index' %}">Home</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link add-transaction" href="{% url 'logout' %}">Logout</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container mt-5">
+        <h2>Add Shop</h2>
+        <form method="post">
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="shopName">Shop Name</label>
+                <input type="text" class="form-control" id="shop_name" name="shop_name" required>
+            </div>
+            <div class="form-group">
+                <label for="location">Location</label>
+                <input type="text" class="form-control" id="location" name="location" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="number" class="form-control" id="phone_no" name="phone_no" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" class="form-control" id="email" name="email">
+            </div>
+            <div class="form-group">
+                <label for="image">Image URL</label>
+                <input type="text" class="form-control" id="image" name="image">
+            </div>
+            <div class="form-group">
+                <label for="balance">Balance</label>
+                <input type="number" class="form-control" id="balance" name="balance" required>
+            </div>
+            <div class="form-group">
+                <label for="transactions">Transactions</label>
+                <input type="text" class="form-control" id="transactions" name="transactions">
+            </div>
+            <div class="form-group">
+                <label for="amounts">Amounts</label>
+                <input type="text" class="form-control" id="amounts" name="amounts">
+            </div>
+            <button type="submit" class="btn btn-primary">Add Shop</button>
+        </form>
+    </div>
+</body>
+</html>

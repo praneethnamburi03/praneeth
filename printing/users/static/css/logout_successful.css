@@ -1,0 +1,25 @@
+/* Your CSS styling for the logout successful page */
+.container {
+    text-align: center;
+    margin-top: 100px;
+}
+
+h1 {
+    color: #333;
+}
+
+.login-link {
+    color: #007BFF;
+    text-decoration: none;
+    margin-top: 20px;
+    display: inline-block;
+    border: 1px solid #007BFF;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.login-link:hover {
+    background-color: #007BFF;
+    color: #fff;
+}
